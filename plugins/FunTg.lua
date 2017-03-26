@@ -42,7 +42,6 @@ local triggers = {
   '^###cb:/(back)',
   '^###cb:/(fall)',
   '^###cb:/(refal)',
-  '^###cb:/(telegram.me/Alireza_abedzadeh),
 }
 local function start()
    local keyboard = {}
@@ -75,8 +74,6 @@ local function HOME()
         {
           {text = "🔖بخش کاربردی ها", callback_data = "/kb"}
         },
-	        {text = "ارتباظ با ادمین", callback_data = "/telegram.me/Alireza_abedzadeh"}
-		},
 		{
           {text = "👥 پشتیبانی", callback_data = "/sp"}
         },
