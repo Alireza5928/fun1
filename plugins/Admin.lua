@@ -16,7 +16,7 @@ local action = function(msg, matches)
 		for i=1, #users do
 		api.sendMessage(users[i], matches[2], true)
 		print(colors('%{green bright}Sent For'), users[i])
-		text = 'Message Sent For *All* Users!'
+		text = 'به تمام کاربران ارسال شد'
 		end
 		api.sendReply(msg, text, true)
 	end
