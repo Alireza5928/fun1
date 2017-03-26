@@ -13,8 +13,8 @@ local triggers = {
   '^###cb:/(md)',
   '^###cb:/(em)',
   '^###cb:/(sp)',
-  '^###cb:/(Amir)',
-  '^###cb:/(mehdi)',
+  '^###cb:/(Alireza)',
+  '^###cb:/(vahid)',
   '^###cb:/(dastanak)',
   '^###cb:/(redastanak)',
   '^###cb:/(chistan)',
@@ -74,6 +74,8 @@ local function HOME()
         {
           {text = "🔖بخش کاربردی ها", callback_data = "/kb"}
         },
+	        {text = "ارتباظ با ادمین", callback_data = "telegram.me/Alireza_abedzadeh"}
+		},
 		{
           {text = "👥 پشتیبانی", callback_data = "/sp"}
         },
@@ -386,10 +388,10 @@ local function sp()
                 local keyboard = {}
           keyboard.inline_keyboard = {
 		    {
-			  {text = "Mr.AmirHossein", callback_data = "/Amir"}
+			  {text = "Alireza Abedzadeh", callback_data = "/Alireza"}
 		    },
 			{
-			  {text = "Mehdi", callback_data = "/mehdi"}
+			  {text = "Vahid", callback_data = "/vahid"}
 			},
 --  		{
 --			  {text = "ارتباط مستقیم", callback_data = "/chat"}
@@ -405,16 +407,16 @@ local function about()
           keyboard.inline_keyboard = {
             {
 
-              {text = "سازنده ربات", url = "https://t.me/Bot_Api"},{text = "همین حالا 5 ستاره دهید", url = "https://t.me/storebot?start=FallGirRobot"},
+              {text = "سازنده ربات", url = "https://telegram.me/Alireza_Abedzadeh"},{text = "همین حالا 5 ستاره دهید", url = "https://telegram.me/storebot?start=Belkameh_Fun_Bot"},
             },
             {
-              {text = "کمک کننده", url = "https://t.me/HEXTOR"},{text = "Api نویس سایت", url = "https://t.me/Bots_sudo"},
+              {text = "کمک کننده", url = "https://telegram.me/v1368b"},{text = "Api نویس سایت", url = "https://telegram.me/Alireza_Abedzadeh"},
             },
             {
-              {text = "کانال ربات", url = "https://t.me/BeyondTeam"},{text = "کانال اخبار ربات", url = "https://t.me/NewsBotApi"}
+              {text = "کانال ربات", url = "https://telegram.me/Botantispam1"},{text = "کانال اخبار ربات", url = "https://telegram.me/Botantispam1"}
             },
             {
-              {text = "اسپانسر تیم", url = "https://t.me/StoreVps",}
+              {text = "اسپانسر تیم", url = "https://telegram.me",}
             },
             {
               {text = "بازگشت🔙", callback_data = "/kb"},
@@ -426,13 +428,13 @@ local function AmirH()
                 local keyboard = {}
           keyboard.inline_keyboard = {
 			{
-		      {text = "ارسال پیام", url = "https://t.me/Bot_Api"},
+		      {text = "ارسال پیام", url = "https://telegram.me/Alireza_abedzadeh"},
 			},
 			{
-			  {text = "ریپورتم", url = "https://t.me/MrAmirAloneBot"},
+			  {text = "ریپورتم", url = "https://telegram.me/Alirezaabedzadeh_pv_bot"},
 			},
 			{
-			  {text = "کانال شخصی", url = "https://t.me/MrAmirAlone"},
+			  {text = "کانال شخصی", url = "https://telegram.me/Botantispam1"},
 		  },
 		    {
 			  {text = "بازگشت🔙", callback_data="/sp"},
@@ -444,13 +446,13 @@ local function mehdi()
        local keyboard = {}
           keyboard.inline_keyboard = {
 		    {
-			  {text = "ارسال پیام", url = "https://t.me/NeroDev"},
+			  {text = "ارسال پیام", url = "https://telegram.me/v1368b"},
 			},
 			{
-			  {text = "ریپورتم", url = "https://t.me/NeroDevBot"},
+			  {text = "ریپورتم", url = "https://telegram.me/v1368b"},
 			},
 			{
-			  {text = "کانال", url = "https://t.me/NeroTeam"},
+			  {text = "کانال", url = "https://telegram.me/"},
 			},
             {
               {text = "بازگشت🔙", callback_data="/sp"},
@@ -636,9 +638,8 @@ local action = function(msg, matches)
           api.editMessageText(msg.chat.id, msg.message_id, '*'..Joke..'*', keyboard, true)
         end
 		if matches[1] == 'about' then
-		local About = [[نسخه ربات "6.5"
-          تشکر ميکنم از دوست خوبم [رضا](https://t.me/HEXTOR) و [پارسا](https://t.me/prs1378)
-          زبان برنامه نويسي شده ربات : لوا]]
+		local About = [[نسخه ربات 1" 
+	تشکر میکنم از جناب اقای @v1368B بابت زحماتشون]]
 		local keyboard = about()
 		api.editMessageText(msg.chat.id, msg.message_id, About, keyboard, true)
 	   end
@@ -732,13 +733,13 @@ end
           api.editMessageText(msg.chat.id, msg.message_id, 'یکی از اشخاص زیر را انتخاب کنید : ', keyboard, true)
         end
    				if matches[1] == 'Amir' then
-		 local AHossein = 'نام : امیرحسین \nبا استفاده از اینلاین های زیر متوانید با امیرحسین در ارتباط باشید'
+		 local AHossein = 'نام: علیرضا \nبا استفاده از اینلاین های زیر متوانید با علیرضا در ارتباط باشید'
          local keyboard = AmirH()
           api.editMessageText(msg.chat.id, msg.message_id, AHossein, keyboard, true)
         end
         if matches[1] == 'mehdi' then
          local keyboard = mehdi()
-		 local MEHDI = 'نام : مهدی\nبا استفاده از اینلاین های زیر میتوانید  با مهدی در ارتباط باشید'
+		 local MEHDI = 'وحید: نام\nبا استفاده از اینلاین  های زیر میتوانید با وحید در ارتباط باشید'
         api.editMessageText(msg.chat.id, msg.message_id, MEHDI, keyboard, true)
        end
 		
